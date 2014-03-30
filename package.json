@@ -1,0 +1,43 @@
+{
+  "name": "parse-authors",
+  "description": "Parse the AUTHORS file into an array of authors objects.",
+  "version": "0.1.1",
+  "homepage": "https://github.com/jonschlinkert/parse-authors",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "http://github.com/jonschlinkert/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/parse-authors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/parse-authors/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/parse-authors/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "docs",
+    "documentation",
+    "generate",
+    "generator",
+    "markdown",
+    "templates",
+    "verb"
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "mocha -R test"
+  },
+  "devDependencies": {
+    "fs-utils": "~0.3.9",
+    "chai": "~1.9.1",
+    "verb": "~0.2.0"
+  }
+}
