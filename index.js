@@ -7,19 +7,20 @@
 
 'use strict';
 
+var re = /^([\s\S]+?)(?:[ \t]*(?:<([\s\S]+?)>[ \t]*)?(?:\(([^\)]+?)\))|$)/;
+
 module.exports = function(str) {
-  var re = /^([\s\S]+?)\s+(?:<([\s\S]+?)>\s+)?(?:\(([\s\S]+?)\))/;
+  str = str.replace(/\r/g, '');
   var authors = [];
 
-  // Convert each line into an object
-  str.split(/[\r\n]*/g).map(function (author) {
-    var matches = author.match(re) || [];
-
-    authors.push({
-      name: matches[1],
-      email: matches[2] || '',
-      url: matches[3] || ''
-    } || {});
+  str.split(/\n/g).forEach(function(line) {
+    if(re.exec(line)) {
+      authors.push({
+        name: RegExp.$1,
+        email: RegExp.$2,
+        url: RegExp.$3
+      });
+    }
   });
   return authors;
 };

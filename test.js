@@ -1,6 +1,15 @@
-var path = require('path');
+/**
+ * parse-authors <https://github.com/assemble/parse-authors>
+ *
+ * Copyright (c) 2014 Jon Schlinkert, contributors.
+ * Licensed under the MIT license.
+ */
+
+'use strict';
+
+
 var should = require('should');
-var authors = require('..');
+var authors = require('./');
 
 
 describe('authors:', function () {
@@ -21,10 +30,8 @@ describe('authors:', function () {
         }
       ]);
     });
-  });
 
-  describe('when the AUTHORS file is parsed, and the email field is missing', function () {
-    it('should return an array of author objects with empty email fields.', function () {
+    it('should return name and email only .', function () {
       var fixture = 'Jon Schlinkert (https://github.com/jonschlinkert)\nBrian Woodward (https://github.com/doowb)';
       authors(fixture).should.eql([
         {
@@ -39,11 +46,9 @@ describe('authors:', function () {
         }
       ]);
     });
-  });
 
-  describe('when only the name exists', function () {
-    it('should return an array of author objects with empty properties for the missing fields.', function () {
-      authors('Jon Schlinkert\nBrian Woodward').shoud.eql([
+    it('should return name only.', function () {
+      authors('Jon Schlinkert\nBrian Woodward').should.eql([
         {
           name: 'Jon Schlinkert',
           email: '',
