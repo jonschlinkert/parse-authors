@@ -5,16 +5,14 @@
  * Licensed under the MIT license.
  */
 
-module.exports = function(str) {
-  var authors = [];
-  // var re = /(.+?) (?:<(.+)> ?)?\((.+)\)/;
-  var re = /^([\s\S]+?)\s+(?:<([\s\S]+?)>\s+)?(?:\(([\s\S]+?)\))/;
+'use strict';
 
-  // Each line should be a single author.
-  var authorsArray = str.split(/\n/);
+module.exports = function(str) {
+  var re = /^([\s\S]+?)\s+(?:<([\s\S]+?)>\s+)?(?:\(([\s\S]+?)\))/;
+  var authors = [];
 
   // Convert each line into an object
-  authorsArray.map(function (author) {
+  str.split(/[\r\n]*/g).map(function (author) {
     var matches = author.match(re) || [];
 
     authors.push({

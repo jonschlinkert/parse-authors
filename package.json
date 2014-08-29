@@ -36,8 +36,9 @@
     "test": "mocha -R test"
   },
   "devDependencies": {
-    "fs-utils": "~0.3.9",
     "chai": "~1.9.1",
-    "verb": "~0.2.0"
+    "should": "^4.0.4",
+    "verb": "^0.2.15",
+    "verb-tag-jscomments": "^0.2.2"
   }
 }
