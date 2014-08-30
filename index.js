@@ -7,7 +7,7 @@
 
 'use strict';
 
-var re = /^([\s\S]+?)(?:[ \t]*(?:<([\s\S]+?)>[ \t]*)?(?:\(([^\)]+?)\))|$)/;
+var re = /^([^<(]+?)?[ \t]*(?:<([^>(]+?)>)?[ \t]*(?:\(([^)]+?)\)|$)/;
 
 module.exports = function(str) {
   str = str.replace(/\r/g, '');
