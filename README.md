@@ -1,7 +1,7 @@
 # parse-authors [![NPM version](https://badge.fury.io/js/parse-authors.svg)](http://badge.fury.io/js/parse-authors)
 
 
-> Parse the AUTHORS file into an array of authors objects.
+> Parse the authors property in package.json or an AUTHORS file into an array of authors objects.
 
 ## Install
 #### Install with [npm](npmjs.org):
