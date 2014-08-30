@@ -1,7 +1,7 @@
 {
   "name": "parse-authors",
-  "description": "Parse the AUTHORS file into an array of authors objects.",
-  "version": "0.1.1",
+  "description": "Parse the authors property in package.json or an AUTHORS file into an array of authors objects.",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/parse-authors",
   "author": {
     "name": "Jon Schlinkert",
@@ -21,13 +21,22 @@
     }
   ],
   "keywords": [
-    "docs",
-    "documentation",
-    "generate",
-    "generator",
-    "markdown",
-    "templates",
-    "verb"
+    "author",
+    "authors",
+    "exec",
+    "expression",
+    "extract",
+    "maintainer",
+    "maintainers",
+    "match",
+    "package",
+    "parse",
+    "person",
+    "pkg",
+    "re",
+    "regex",
+    "regexp",
+    "regular"
   ],
   "engines": {
     "node": ">=0.8"
