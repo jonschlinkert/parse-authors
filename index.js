@@ -7,21 +7,11 @@
 
 'use strict';
 
-var re = /^([^<(]+?)?[ \t]*(?:<([^>(]+?)>)?[ \t]*(?:\(([^)]+?)\)|$)/;
+var author = require('parse-author');
 
-module.exports = function(str) {
-  str = str.replace(/\r/g, '');
-  var authors = [];
-
-  str.split(/\n/g).forEach(function(line) {
-    if(re.exec(line)) {
-      authors.push({
-        name: RegExp.$1,
-        email: RegExp.$2,
-        url: RegExp.$3
-      });
-    }
-  });
-  return authors;
+module.exports = function (str) {
+  return str.replace(/\r/g, '').split('\n')
+    .reduce(function (authors, line) {
+      return authors.concat(author(line));
+    }, []);
 };
-
