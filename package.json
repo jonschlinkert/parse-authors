@@ -3,23 +3,26 @@
   "description": "Parse a string into an array of objects with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.",
   "version": "0.2.2",
   "homepage": "https://github.com/jonschlinkert/parse-authors",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/parse-authors.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/parse-authors",
   "bugs": {
     "url": "https://github.com/jonschlinkert/parse-authors/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/parse-authors/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
+  "files": [],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "test": "mocha -R test"
+  },
+  "dependencies": {
+    "parse-author": "^0.1.0"
+  },
+  "devDependencies": {
+    "should": "*",
+    "verb": "^0.2.15"
+  },
   "keywords": [
     "author",
     "authors",
@@ -38,18 +41,9 @@
     "regexp",
     "regular"
   ],
-  "engines": {
-    "node": ">=0.8"
-  },
-  "scripts": {
-    "test": "mocha -R test"
-  },
-  "devDependencies": {
-    "should": "^4.0.4",
-    "verb": "^0.2.15",
-    "verb-tag-jscomments": "^0.2.2"
-  },
-  "dependencies": {
-    "parse-author": "^0.1.0"
+  "verb": {
+    "related": {
+      "list": []
+    }
   }
 }
