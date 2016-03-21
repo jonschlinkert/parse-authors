@@ -1,7 +1,7 @@
 {
   "name": "parse-authors",
-  "description": "Parse a string into an array of objects with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.",
   "version": "0.2.2",
+  "description": "Parse a string into an array of objects with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.",
   "homepage": "https://github.com/jonschlinkert/parse-authors",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/parse-authors",
@@ -9,19 +9,22 @@
     "url": "https://github.com/jonschlinkert/parse-authors/issues"
   },
   "license": "MIT",
-  "files": [],
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
   "engines": {
     "node": ">=0.8"
   },
   "scripts": {
-    "test": "mocha -R test"
+    "test": "mocha"
   },
   "dependencies": {
-    "parse-author": "^0.1.0"
+    "parse-author": "^0.2.1"
   },
   "devDependencies": {
-    "should": "*",
-    "verb": "^0.2.15"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "author",
@@ -42,8 +45,27 @@
     "regular"
   ],
   "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
     "related": {
-      "list": []
+      "list": [
+        "author-regex",
+        "parse-author",
+        "stringify-author"
+      ]
+    },
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
     }
   }
 }

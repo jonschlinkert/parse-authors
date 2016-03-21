@@ -1,4 +1,38 @@
 {
   "name": "parse-authors",
-  "version": "0.2.1"
+  "description": "Parse a string into an array of objects with `name`, `email` and `url` properties following npm conventions. Useful for the `authors` property in package.json or for parsing an AUTHORS file into an array of authors objects.",
+  "repository": "jonschlinkert/parse-authors",
+  "license": "MIT",
+  "homepage": "https://github.com/jonschlinkert/parse-authors",
+  "authors": [
+    "Jon Schlinkert (https://github.com/jonschlinkert)"
+  ],
+  "main": [
+    "index.js"
+  ],
+  "dependencies": {
+    "parse-author": "^0.2.1"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5"
+  },
+  "keywords": [
+    "author",
+    "authors",
+    "exec",
+    "expression",
+    "extract",
+    "maintainer",
+    "maintainers",
+    "match",
+    "package",
+    "parse",
+    "person",
+    "pkg",
+    "re",
+    "regex",
+    "regexp",
+    "regular"
+  ]
 }
