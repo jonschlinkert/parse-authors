@@ -9,9 +9,11 @@
 
 var author = require('parse-author');
 
-module.exports = function(str) {
-  return str.replace(/\r/g, '').split('\n')
-    .reduce(function(authors, line) {
-      return authors.concat(author(line));
-    }, []);
+module.exports = function(authors) {
+  if (typeof authors === 'string') {
+    authors = authors.split(/[\r\n]+/);
+  }
+  return authors.reduce(function(acc, str) {
+    return acc.concat(author(str));
+  }, []);
 };
