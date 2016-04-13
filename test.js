@@ -29,6 +29,14 @@ describe('authors:', function() {
     ]);
   });
 
+  it('should ignore empty lines', function() {
+    var fixture = '\nJon Schlinkert <jon@foo.email> (https://github.com/jonschlinkert)\n\nBrian Woodward <brian@bar.email> (https://github.com/doowb)\n\n';
+    assert.deepEqual(authors(fixture), [
+      {name: 'Jon Schlinkert', email: 'jon@foo.email', url: 'https://github.com/jonschlinkert'},
+      {name: 'Brian Woodward', email: 'brian@bar.email', url: 'https://github.com/doowb'}
+    ]);
+  });
+
   it('should return name and email only .', function() {
     var fixture = 'Jon Schlinkert (https://github.com/jonschlinkert)\nBrian Woodward (https://github.com/doowb)';
     assert.deepEqual(authors(fixture), [
