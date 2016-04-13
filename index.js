@@ -1,7 +1,7 @@
 /**
  * parse-authors <https://github.com/assemble/parse-authors>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
+ * Copyright (c) 2014-2016 Jon Schlinkert, contributors.
  * Licensed under the MIT license.
  */
 
