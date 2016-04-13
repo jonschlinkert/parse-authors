@@ -11,8 +11,7 @@ var author = require('parse-author');
 
 module.exports = function(authors) {
   if (typeof authors === 'string') {
-    authors = authors.split(/[\r\n]+/).filter(Boolean);
-    authors = authors.length ? authors : [''];
+    authors = authors.trim().split(/[\r\n]+/);
   }
   return authors.reduce(function(acc, str) {
     return acc.concat(author(str));
